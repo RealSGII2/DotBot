@@ -41,7 +41,11 @@ namespace DotBot.Bot
         public void ConfigureClientServices(ref ServiceCollection services)
         {
             services
-                .AddSingleton(_client)
+                // We use IDiscordClient in unit tests, so use _client wherever both
+                // IDiscordClient or DiscordSocketClient is requested
+                // From Blackcatmaxy/Botcatmaxy
+                // https://github.com/Blackcatmaxy/Botcatmaxy/blob/f4d61be126bee8e53b0b77abb530d5a332aa95d5/src/BotCatMaxy/Program.cs#L78
+                .AddSingleton<IDiscordClient, DiscordSocketClient>(_ => _client)
                 .AddSingleton(_interactionService)
                 .AddSingleton<CommandHandler>()
                 .AddSingleton<ExperienceGain>();

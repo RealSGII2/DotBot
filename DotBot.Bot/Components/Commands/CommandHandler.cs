@@ -1,4 +1,5 @@
-﻿using Discord.Interactions;
+﻿using Discord;
+using Discord.Interactions;
 using Discord.WebSocket;
 using System.Reflection;
 
@@ -10,11 +11,11 @@ namespace DotBot.Bot.Components.Commands
         private readonly InteractionService _interactionService;
         private readonly IServiceProvider _services;
 
-        public CommandHandler(IServiceProvider services, InteractionService interactionService, DiscordSocketClient client)
+        public CommandHandler(IServiceProvider services, InteractionService interactionService, IDiscordClient client)
         {
             _interactionService = interactionService;
             _services = services;
-            _client = client;
+            _client = (DiscordSocketClient)client;
         }
 
         public async Task HookCommandsAsync()

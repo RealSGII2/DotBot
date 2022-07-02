@@ -1,27 +1,34 @@
-﻿using Discord.WebSocket;
+﻿using Discord;
+using Discord.WebSocket;
 using DotBot.Bot.Extensions;
+using DotBot.Shared.Services;
 
 namespace DotBot.Bot.Components
 {
     public class ExperienceGain
     {
-        private readonly DiscordSocketClient _client;
-        private readonly Random _random = new();
+        private readonly DiscordSocketClient? _client;
+        private static readonly Random _random = new();
 
-        public ExperienceGain(DiscordSocketClient client)
+        public ExperienceGain()
+        {
+            Console.WriteLine("Exp Gain Init for Testing!");
+        }
+
+        public ExperienceGain(IDiscordClient client)
         {
             Console.WriteLine("Exp Gain Init!");
-            _client = client;
+            _client = (DiscordSocketClient)client;
             _client.MessageReceived += OnMessage;
         }
 
-        private Task OnMessage(SocketMessage message)
+        public Task OnMessage(IMessage message)
         {
             Console.WriteLine("Got the message event!");
-            if (message.Channel is not SocketGuildChannel)
+            if (message.Channel is not IGuildChannel)
                 return Task.CompletedTask;
 
-            var channel = (SocketGuildChannel)message.Channel;
+            var channel = (IGuildChannel)message.Channel;
             var guildData = channel.Guild.GetData();
 
             var gain = _random.Next((int)guildData.MinExperienceGain, (int)guildData.MaxExperienceGain);

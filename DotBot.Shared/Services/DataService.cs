@@ -5,7 +5,12 @@ namespace DotBot.Shared.Services
 {
     public class DataService
     {
-        private readonly string databasePath = @".\Data.db";
+        private readonly string _databasePath;
+
+        public DataService(string databasePath = @".\Data.db")
+        {
+            _databasePath = databasePath;
+        }
 
         /// <summary>
         /// Gets a guild from the database. If it doesn't exist, an entry will be created.
@@ -14,7 +19,7 @@ namespace DotBot.Shared.Services
         /// <returns>The guild's database entry</returns>
         public DatabaseGuild GetGuild(ulong guildId)
         {
-            using LiteDatabase database = new(databasePath);
+            using LiteDatabase database = new(_databasePath);
             var column = database.GetCollection<DatabaseGuild>("guilds");
             column.EnsureIndex(g => g.Id);
 
@@ -41,7 +46,7 @@ namespace DotBot.Shared.Services
 
         public void SaveGuild(DatabaseGuild guild)
         {
-            using LiteDatabase database = new(databasePath);
+            using LiteDatabase database = new(_databasePath);
             var column = database.GetCollection<DatabaseGuild>("guilds");
             Console.WriteLine(column.Update(guild));
         }
