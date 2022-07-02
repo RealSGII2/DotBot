@@ -10,21 +10,16 @@ namespace DotBot.Bot.Components
         private readonly DiscordSocketClient? _client;
         private static readonly Random _random = new();
 
-        public ExperienceGain()
-        {
-            Console.WriteLine("Exp Gain Init for Testing!");
-        }
+        public ExperienceGain() { }
 
         public ExperienceGain(IDiscordClient client)
         {
-            Console.WriteLine("Exp Gain Init!");
             _client = (DiscordSocketClient)client;
             _client.MessageReceived += OnMessage;
         }
 
         public Task OnMessage(IMessage message)
         {
-            Console.WriteLine("Got the message event!");
             if (message.Channel is not IGuildChannel)
                 return Task.CompletedTask;
 

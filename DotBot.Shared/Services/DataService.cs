@@ -48,7 +48,7 @@ namespace DotBot.Shared.Services
         {
             using LiteDatabase database = new(_databasePath);
             var column = database.GetCollection<DatabaseGuild>("guilds");
-            Console.WriteLine(column.Update(guild));
+            column.Update(guild);
         }
     }
 }

@@ -26,8 +26,6 @@ namespace DotBot.Bot.Components.Commands
                 services: _services
             );
 
-            Console.WriteLine(_interactionService.SlashCommands.Count);
-
             //_interactionService.InteractionExecuted += HandleCommand;
             _client.InteractionCreated += HandleInteraction;
 
