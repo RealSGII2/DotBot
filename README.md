@@ -68,3 +68,16 @@ Then, change the the values in there.
 #### Starting
 
 Run/debug `DotBot` to start the program.
+
+### Testing
+
+All commits and pull requests will be checked via .NET testing. These are ran via GitHub actions.
+
+#### Making Sure It Works
+
+Before committing, be sure to run .NET checks. You can right click on the solution in Visual Studio, and click `Run Tests` to start them.
+
+#### Writing Tests
+
+New or updated features should have tests written for them that reflect the change. We use xUnit for testing. You can read more on how to use it 
+by visiting [https://xunit.net/](https://xunit.net/)
