@@ -7,7 +7,7 @@
 </p>
 
 <h3 align="center">
-  A free, open source Discord leveling bot.
+  A free, open source Discord levelling bot.
 </h3>
 
 ## Motivation
