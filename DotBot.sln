@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotBot", "DotBot\DotBot.csproj", "{29D22DAC-4259-49F5-B4F9-3636E8CB1669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotBot.Shared", "DotBot.Shared\DotBot.Shared.csproj", "{7738D487-6457-4D6A-87C4-DD5168D93423}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotBot.Bot", "DotBot.Bot\DotBot.Bot.csproj", "{B4DEBA23-2D75-4B5D-886B-743EEE085E77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29D22DAC-4259-49F5-B4F9-3636E8CB1669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D22DAC-4259-49F5-B4F9-3636E8CB1669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D22DAC-4259-49F5-B4F9-3636E8CB1669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D22DAC-4259-49F5-B4F9-3636E8CB1669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7738D487-6457-4D6A-87C4-DD5168D93423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7738D487-6457-4D6A-87C4-DD5168D93423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7738D487-6457-4D6A-87C4-DD5168D93423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7738D487-6457-4D6A-87C4-DD5168D93423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4DEBA23-2D75-4B5D-886B-743EEE085E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4DEBA23-2D75-4B5D-886B-743EEE085E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4DEBA23-2D75-4B5D-886B-743EEE085E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4DEBA23-2D75-4B5D-886B-743EEE085E77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75D6DCE0-D830-4239-8CEA-C2A36D1C793C}
+	EndGlobalSection
+EndGlobal
