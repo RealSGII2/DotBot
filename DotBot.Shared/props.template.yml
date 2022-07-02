@@ -1,0 +1,13 @@
+﻿#####################
+####  props.yml  ####
+#####################
+#
+# This configuration file sets all global properties used across the bot.
+#
+# To get started:
+# (1) Rename this file to props.yml
+# (2) Add your Discord token below
+# (3) Run the bot!
+
+tokens:
+    discord: "" # Enter your bot's Discord token here
