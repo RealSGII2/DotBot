@@ -56,6 +56,7 @@ The different parts of the project are divided into different C# projects:
 - `DotBot.Bot` is the code that runs the bot
 - `DotBot.Shared` is the code that is shared between all of the projects
   - This is here because we plan on adding an API server too.
+- `DotBot.Tests` contains all the unit tests
   
 ### Getting Started
 
